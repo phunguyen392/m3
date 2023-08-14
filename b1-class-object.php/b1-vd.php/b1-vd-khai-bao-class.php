@@ -6,7 +6,7 @@ class Customer{          // khai báo lớp
        
        
 
-        echo "ten toi la: " . $this->name  . "<br>";
+        echo "ten toi la: " . $this->name  . "<br>"; 
         echo "nam nay :" . $this -> age. " tuoi";
     }
   

@@ -1,5 +1,5 @@
 <?php
-class Person {
+class marks {
     public $name;
     public $age;
 
@@ -9,7 +9,7 @@ class Person {
 }
 
 // Tạo một đối tượng từ lớp Person
-$person = new Person();
+$person = new marks();
 
 // Gán giá trị cho thuộc tính của đối tượng
 $person->name = "Linh";
