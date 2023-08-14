@@ -1,12 +1,18 @@
 <?php
-class Custormer{
-    public $name;
+class Customer{          // khai báo lớp
+    public $name;           // khởi tọa thuôc thuộc tinh
     public $age;
-    public function setName($name){
-        $this->name = $name;
+    public function abc(){    // khơi tạo phương thức
+       
+       
+
+        echo "ten toi la: " . $this->name  . "<br>";
+        echo "nam nay :" . $this -> age. " tuoi";
     }
-    public function getAge($age){
-        return $this -> age;
-    }
+  
 
 }
+$Customer = new Customer();   //khơi tạo đối tượng
+$Customer -> name = "a";
+$Customer -> age = "19";
+$Customer -> abc();
