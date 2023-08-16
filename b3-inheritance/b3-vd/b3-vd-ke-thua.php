@@ -13,21 +13,22 @@ class People {
     }
 
     public function sleep() {
-        echo $this->name . "know to sleep.";
+        echo $this->name . " know to sleep.";
     }
 }
 
 class Man extends People {
-    private $breed;
+    protected $height;
     
-    public function __construct($name, $age, $breed) {
+    public function __construct($name, $age, $height) {
         parent::__construct($name, $age);
-        $this->breed = $breed;
+        $this->height = $height;
     }
     
     public function speak() {
         echo $this->name . "  know  to speak.";
     }
 }
-$People = new People("man",3);
-echo $People->eat();
+
+$man = new Man("con",1,15);
+echo $man->sleep();
