@@ -3,12 +3,10 @@ class Circle
 {
     public $radius;
     public $color;
-    public $area;
-    public function __construct($radius, $color, $area)
+    public function __construct($radius, $color)
     {
         $this->radius = $radius;
         $this->color = $color;
-        $this->area = $area;
     }
     public function setRadius($radius)
     {
@@ -29,28 +27,24 @@ class Circle
         return   $this->color;
     }
 
-    public function setArea( $area)
-    {
-        $this->area = $area;
-    }
+    
+    
     public function getArea()
     {
-        return  $this->area;
+        return  pi() * $this->radius * $this->radius;
     }
     public function __toString()
     {
-        return "Circle [radius={$this->radius}, color={$this->color}]";
+        return "Circle = [color={$this->color}, radius={$this->radius}]";
     }
 }
 class Cylinder extends Circle
 {
-    public $volume;
     public $height;
-    public function __construct($radius, $color, $area, $height, $volume)
+    public function __construct($radius, $color, $height)
     {
-        parent::__construct($radius, $color, $area);
+        parent::__construct($radius, $color);
         $this->height = $height;
-        $this->volume = $volume;
         
     }
     public function setHeight($height){
@@ -61,20 +55,22 @@ class Cylinder extends Circle
        return $this->height ;
 
     }
-    public function setVolume($volume){
-        $this->volume = $volume;
-    }
+   
     public function getVolume(){
-        return $this->volume;
+        return pi() * $this->radius * $this->radius * $this->height;
     }
     public function __toString()
     {
         return "Cylinder  [radius={$this->radius}, color={$this->color},
-         height={$this->height}, volume={$this->volume}]";
+         height={$this->height}]";
     }
 }
 $circle = new Circle(2,"pink",12);
 echo $circle;
 echo "<br>";
+echo "Circle Area: " . $circle->getArea();
+echo "<br>";
 $cylinder = new Cylinder(2, "green", 5, 6, 11);
 echo $cylinder;
+echo "<br> ";
+echo "Cylinder Volume: " . $cylinder->getVolume();
