@@ -16,5 +16,5 @@ $obj = new MyClass();
 $value = $obj->getMyVariable();
 echo $value; // In ra giá trị của $myVariable
 
-// Gọi setter
+// Gọi setter 
 $obj->setMyVariable(42);
