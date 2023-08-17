@@ -1,7 +1,7 @@
 <?php
 class Point2D
 {
-    public float $x;
+    public float $x ;
     public float $y;
     public function __construct(float $x, float $y)
     {
@@ -10,7 +10,7 @@ class Point2D
     }
     public function setX($x)
     {
-        $this->x = $x;
+        $this->x = $x; 
     }
     public function getX()
     {
@@ -44,7 +44,7 @@ class Point2D
     }
 }
 class Point3D extends Point2D
-{
+{ 
     public $z;
     public function __construct($x, $y, $z)
     {
@@ -79,8 +79,8 @@ class Point3D extends Point2D
         return          "Point3D [ x = {$this->x}, y = {$this->y}, z = {$this->z}  ]";
     }
 }
-$point2d = new Point2D(1, 2);
-echo $point2d;
+$point2d = new Point2D(6, 2);
+echo $point2d->__toString();
 echo "<br>";
 $point3d = new Point3D(3, 4, 5);
 echo $point3d;
