@@ -11,10 +11,10 @@ class DB_driver
         // Nếu chưa kết nối thì thực hiện kết nối
         if (!$this->__conn){
             // Kết nối
-            $this->__conn = mysqli_connect('localhost', 'root', 'vertrigo', 'demo') or die ('Lỗi kết nối');
+            $this->__conn = mysqli_connect('localhost', 'root', '', 'demo') or die ('Lỗi kết nối');
  
             // Xử lý truy vấn UTF8 để tránh lỗi font
-            mysqli_query($this->__conn, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
+            mysqli_set_charset($this->__conn, 'utf8');
         }
     }
  
@@ -40,7 +40,7 @@ class DB_driver
         // Lặp qua data
         foreach ($data as $key => $value){
             $field_list .= ",$key";
-            $value_list .= ",'".mysql_escape_string($value)."'";
+            $value_list .= ",'".mysqli_real_escape_string($this->__conn, $value)."'";
         }
  
         // Vì sau vòng lặp các biến $field_list và $value_list sẽ thừa một dấu , nên ta sẽ dùng hàm trim để xóa đi
@@ -57,7 +57,7 @@ class DB_driver
         $sql = '';
         // Lặp qua data
         foreach ($data as $key => $value){
-            $sql .= "$key = '".mysql_escape_string($value)."',";
+            $sql .= "$key = '".mysqli_real_escape_string($this->__conn, $value)."',";
         }
  
         // Vì sau vòng lặp biến $sql sẽ thừa một dấu , nên ta sẽ dùng hàm trim để xóa đi
@@ -91,7 +91,7 @@ class DB_driver
         $return = array();
  
         // Lặp qua kết quả để đưa vào mảng
-        while ($row = mysqli_fetch_assoc($result)){
+        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
             $return[] = $row;
         }
  
@@ -113,7 +113,7 @@ class DB_driver
             die ('Câu truy vấn bị sai');
         }
  
-        $row = mysqli_fetch_assoc($result);
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
  
         // Xóa kết quả khỏi bộ nhớ
         mysqli_free_result($result);
@@ -125,3 +125,4 @@ class DB_driver
         return false;
     }
 }
+?>

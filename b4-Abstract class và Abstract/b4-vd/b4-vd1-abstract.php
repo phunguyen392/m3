@@ -1,5 +1,5 @@
 <?php
-public abstract class Geometric{
+ abstract  class Geometric{
     public $name;
     public function getName(){
         return $this->name;
