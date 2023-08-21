@@ -1,5 +1,8 @@
 <?php
+ interface Resizeable{
+  public function resize($percent);
 
+<<<<<<< HEAD
 
 interface Resizeable
 {
@@ -24,8 +27,23 @@ class Circle implements Resizeable
    {
       return pi() * $this->radius * $this->radius;
    }
+=======
+ };
+ class Circle implements Resizeable{
+   public $radius;
+function __construct($radius)
+{
+   $this->radius = $radius;
 }
+public function getArea(){
+   return $this->radius * $this->radius * pi();
+>>>>>>> 777f496816e407cb9acf3b81953f3e32ab5841cb
+}
+public function resize($percent){
+   $this->radius *= (1 + $percent / 100);
+   return $this->getArea();}
 
+<<<<<<< HEAD
 class Rectangle implements Resizeable
 {
    private $width;
@@ -91,3 +109,10 @@ foreach ($hinh_hoc as $circle){
    echo "<br>";
 
 }
+=======
+
+}
+$circle = new Circle(3);
+echo "dien tich hinh tron la: " . $circle->getArea(). "<br>";
+echo $circle->resize(100);
+>>>>>>> 777f496816e407cb9acf3b81953f3e32ab5841cb
