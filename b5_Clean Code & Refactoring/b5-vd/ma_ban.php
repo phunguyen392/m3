@@ -2,6 +2,7 @@
 // Đặt tên không tốt
 getArea($a,$b);
 
+
         // đặt tên biến chiêu dài và chiều rộng :
         $x;  => $chieu_dai or $length;
         $y;  => $chieu_rong or $width
