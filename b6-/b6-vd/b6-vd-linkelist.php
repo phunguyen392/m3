@@ -1,7 +1,5 @@
 <?php
-class MyLinkedList {
-    public $head;
-    public $size;
+
 
      class Node {
         public $data;
@@ -12,7 +10,10 @@ class MyLinkedList {
             $this->next = null;
         }
     }
-
+    
+    class MyLinkedList {
+        public $head;
+        public $size;
     public function __construct() {
         $this->head = null;
         $this->size = 0;
