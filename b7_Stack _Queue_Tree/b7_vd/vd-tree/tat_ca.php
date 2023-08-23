@@ -122,26 +122,36 @@ $bst->insert(4);
 $bst->insert(7);
 $bst->insert(13);
 
-// Tìm kiếm phần tử trong cây
-$result = $bst->search(7);
-if ($result !== null) {
-    echo "Phần tử 7 được tìm thấy trong cây.";
-} else {
-    echo "Phần tử 7 không tồn tại trong cây.";
-}
-echo "<hr>";
 
-// Duyệt tiền thứ tự
-echo "Duyệt tiền thứ tự: ";
-$bst->preOrderTraversal();
-echo "<hr>";
+echo "<pre>";
+ print_r($bst);
+ echo "</pre>";
 
-// Duyệt trung thứ tự
-echo "Duyệt trung thứ tự: ";
-$bst->inOrderTraversal();
-echo "<hr>";
 
-// Duyệt hậu thứ tự
-echo "Duyệt hậu thứ tự: ";
-$bst->postOrderTraversal();
-echo "<hr>";
+
+
+
+
+// // Tìm kiếm phần tử trong cây
+// $result = $bst->search(7);
+// if ($result !== null) {
+//     echo "Phần tử 7 được tìm thấy trong cây.";
+// } else {
+//     echo "Phần tử 7 không tồn tại trong cây.";
+// }
+// echo "<hr>";
+
+// // Duyệt tiền thứ tự
+// echo "Duyệt tiền thứ tự: ";
+// $bst->preOrderTraversal();
+// echo "<hr>";
+
+// // Duyệt trung thứ tự 
+// echo "Duyệt trung thứ tự: ";
+// $bst->inOrderTraversal();
+// echo "<hr>";
+
+// // Duyệt hậu thứ tự
+// echo "Duyệt hậu thứ tự: ";
+// $bst->postOrderTraversal();
+// echo "<hr>";
