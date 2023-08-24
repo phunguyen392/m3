@@ -31,7 +31,7 @@ getOperation(){
 
 // Phương thức có quá nhiều tham số
 
-function calculateTotalPrice($quantity, $price, $discount, $taxRate, $shippingFee, $customerPoints, $...)
+// function calculateTotalPrice($quantity, $price, $discount, $taxRate, $shippingFee, $customerPoints, $...)
 {
     // Quá nhiều tham số gây khó khăn trong việc sử dụng và hiểu phương thức
     // Có thể xem xét gom nhóm các tham số liên quan vào một đối tượng

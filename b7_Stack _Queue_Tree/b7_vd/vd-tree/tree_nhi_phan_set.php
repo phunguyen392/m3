@@ -59,5 +59,5 @@ $binaryTree->insert(4);
 $binaryTree->insert(7);
 $binaryTree->insert(9);
 
-echo "Inorder traversal: ";
+echo "theo thu tu là : ";
 $binaryTree->inorderTraversal($binaryTree->root);
