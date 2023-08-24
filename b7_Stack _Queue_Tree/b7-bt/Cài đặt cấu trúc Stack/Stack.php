@@ -9,7 +9,7 @@ class Stack{
       }
     public function push($item){
         if($this->isFull()){
-            echo "mang day k the them";
+            echo "mang day k the them". "<br>";
         }else{
             array_unshift($this->stack, $item);
             
@@ -17,11 +17,11 @@ class Stack{
 
     }
     public function pop(){
-        if(!empty($this->stack)){
+        if(empty($this->stack)){
 
-            array_shift($this->stack);
+            echo "mang rong k co gi de xoa" . "<br>";
         }else{
-            echo "mang rong k co gi de xoa";
+            array_shift($this->stack);
         }
     }
     public function top(){
@@ -49,20 +49,20 @@ class Stack{
 
 
 $stack = new Stack();
+// $stack->push(2);
+// $stack->push(12);
+// $stack->push(9);
 $stack->push(2);
 $stack->push(12);
 $stack->push(9);
-$stack->push(2);
-$stack->push(12);
-// $stack->push(9);
-// $stack->push(17);
-// $stack->push(19);
+$stack->push(17);
+$stack->push(19);
 
 // $stack->push(17);
 // $stack->push(19);
 
-$stack->pop();
-$stack->pop();
+// $stack->pop();
+// $stack->pop();
 // $stack->pop();
 
 // echo $stack->top();
