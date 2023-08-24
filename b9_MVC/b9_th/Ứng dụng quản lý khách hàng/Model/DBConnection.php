@@ -31,16 +31,16 @@ class DBConnection
             PDO::ATTR_EMULATE_PREPARES => false,
         ];
 
-        try {
-            $pdo = new PDO($dsn, $this->username, $this->password, $options);
-            echo "Kết nối thành công";
-        } catch (PDOException $e) {
-            echo "Kết nối thất bại: " . $e->getMessage();
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
+    //     try {
+    //         $pdo = new PDO($dsn, $this->username, $this->password, $options);
+    //         echo "Kết nối thành công";
+    //     } catch ( $e) {
+    //         echo "Kết nối thất bại: " . $e->getMessage();
+    //         throw new PDOException($e->getMessage(), (int)$e->getCode());
+    //     }
 
-        return $pdo;
-    }
+    //     return $pdo;
+    // }
 }
 
 // Sử dụng lớp DBConnection để kết nối đến cơ sở dữ liệu
@@ -49,19 +49,5 @@ $pdo = $db->connect();
 
 // Tiếp tục thực hiện các thao tác khác với kết nối PDO
 
-?>
+}
 
-// Tiếp tục thực hiện các thao tác khác với kết nối PDO
-
-?>
-
-// $username   = 'root';
-// $password   = '';
-// $database   = 'ql_tiem_thuoc';
-// try {
-//     $conn = new PDO('mysql:host=localhost;dbname='.$database, $username, $password);
-//     // echo "ket noi thanh cong";
-// } catch (Exception $e) {
-//     // echo $e->getMessage();
-//     echo '<h1> Khong the ket noi CSDL </h1>';
-// }

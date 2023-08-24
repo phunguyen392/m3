@@ -35,15 +35,15 @@ use \Controller\CustomerController;
         case 'add':
             $controller->add();
             break;
-        // case 'delete':
-        //     $controller->delete();
-        //     break;
-        // case 'edit':
-        //     $controller->edit();
-        //     break;
-        // default:
-        //     $controller->index();
-        //     break;
+        case 'delete':
+            $controller->delete();
+            break;
+        case 'edit':
+            $controller->edit();
+            break;
+        default:
+            $controller->index();
+            break;
     }
     ?>
 </div>
